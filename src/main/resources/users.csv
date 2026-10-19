@@ -1,0 +1,15 @@
+id,name,email
+1,Иван Петров,ivan.petrov@mail.ru
+2,Anna Smith,anna.smith@gmail.com
+3,Мария Иванова,maria.ivanova@yandex.ru
+4,John Doe,john.doe@gmail.com
+5,Ольга Сидорова,olga.s@mail.ru
+6,Peter Brown,peter.brown@company.com
+7,Елена Орлова,elena.orlova@gmail.com
+# Ниже строки с ошибками — для демонстрации валидации
+abc,Неверный Идентификатор,bad.id@mail.ru
+8,А,short.name@mail.ru
+9,Сергей Ким,not-an-email
+10,Алексей Волков
+2,Дубликат Идентификатора,duplicate@gmail.com
+11,Дубликат Почты,IVAN.PETROV@mail.ru
