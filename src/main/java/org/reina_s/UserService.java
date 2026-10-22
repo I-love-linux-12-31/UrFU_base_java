@@ -74,23 +74,21 @@ public class UserService {
         return users.isEmpty();
     }
 
-    // ---------- обработка через Stream API ----------
 
-    /** filter(): пользователи, у которых email в указанном искомом домене. */
     public List<User> filterByEmailDomain(String domain) {
         return users.stream()
                 .filter(u -> u.getEmailDomain().equalsIgnoreCase(domain))
                 .toList();
     }
 
-    /** map(): преобразование пользователей в строки контактов «Имя <email>». */
+
     public List<String> toContactList() {
         return users.stream()
                 .map(u -> u.getName() + " <" + u.getEmail() + ">")
                 .toList();
     }
 
-    /** sorted(): сортировка по выбранному полю. */
+
     public List<User> sortBy(SortField field) {
         return users.stream()
                 .sorted(field.getComparator())

@@ -29,7 +29,6 @@ public class UserCsvReader {
         List<User> users = new MyLinkedList<>();
         List<String> errors = new MyLinkedList<>();
 
-        // try-with-resources: reader закроется автоматически, даже если возникнет исключение
         try (BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
             String line;
             int lineNumber = 0;
